@@ -12,7 +12,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { createWatchlist, deleteWatchlist, getMovieWatchlist } from "services/movie";
 import { Link } from "react-router-dom";
-const { OMDB_API_KEY, OMDB_URL } = process.env;
+const OMDB_API_KEY = process.env.OMDB_API_KEY;
+const OMDB_URL = process.env.OMDB_URL;
 
 function Index() {
 

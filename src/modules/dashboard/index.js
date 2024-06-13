@@ -8,7 +8,8 @@ import images from "../../config/imageConfig"
 import { addLoader, removeLoader } from "../../redux/commonSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-const { OMDB_API_KEY, OMDB_URL } = process.env;
+const OMDB_API_KEY = process.env.OMDB_API_KEY;
+const OMDB_URL = process.env.OMDB_URL;
 
 function Index() {
 
