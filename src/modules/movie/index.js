@@ -24,7 +24,7 @@ function Index() {
     const getMovieDetail = async (id) => {
         let config = {
             method: 'get',
-            url: `${REACT_APP_OMDB_URL}?apikey=${REACT_APP_OMDB_API_KEY}?apikey=d2d41cc2&i=${id}`,
+            url: `${REACT_APP_OMDB_URL}?apikey=${REACT_APP_OMDB_API_KEY}&i=${id}`,
             headers: {
                 'Content-Type': 'application/json'
             },
