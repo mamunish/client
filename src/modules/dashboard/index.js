@@ -8,6 +8,7 @@ import images from "../../config/imageConfig"
 import { addLoader, removeLoader } from "../../redux/commonSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const { OMDB_API_KEY, OMDB_URL } = process.env;
 
 function Index() {
 
@@ -26,7 +27,7 @@ function Index() {
 
         let config = {
             method: 'get',
-            url: `https://www.omdbapi.com/?apikey=d2d41cc2&s=${movieName}`,
+            url: `${OMDB_URL}?apikey=${OMDB_API_KEY}&s=${movieName}`,
             headers: {
                 'Content-Type': 'application/json'
             },

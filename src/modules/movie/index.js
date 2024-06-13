@@ -12,6 +12,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { createWatchlist, deleteWatchlist, getMovieWatchlist } from "services/movie";
 import { Link } from "react-router-dom";
+const { OMDB_API_KEY, OMDB_URL } = process.env;
 
 function Index() {
 
@@ -23,7 +24,7 @@ function Index() {
     const getMovieDetail = async (id) => {
         let config = {
             method: 'get',
-            url: `https://www.omdbapi.com/?apikey=d2d41cc2&i=${id}`,
+            url: `${OMDB_URL}?apikey=${OMDB_API_KEY}?apikey=d2d41cc2&i=${id}`,
             headers: {
                 'Content-Type': 'application/json'
             },
